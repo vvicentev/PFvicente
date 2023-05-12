@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-size: 30px;
+  color: black;
+  font-family: Bebas Neue, cursive; ;
+  letter-spacing: 1px;
+}
+
+
 .hero{
     height: 100vh;
     background-image: ;
@@ -88,6 +97,8 @@
     gap: 0;
 }
 
+/* imágenes principales de todas las secciones */
+
 .imagen-principal{
     background-image: url(images/nuevo.foto.png);
     height: 80vh;
@@ -100,7 +111,6 @@
     flex-direction: column;
     padding-inline: 150px;
 }
-
 
 .imagen-principal h2{
     color: white;
@@ -226,6 +236,8 @@
     border-radius: 3px;
 }
 
+/*Nosotros*/
+
 .texto-nosotros{
     padding-top: 0;
     align-items: center;
@@ -247,7 +259,7 @@
 
 .parrafo-nosotros{
     margin: 50px auto 0;
-    padding: 5px;
+    padding: 0.5px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -261,6 +273,7 @@
     "grid-3 grid-4";
     gap: 1rem;
     padding-top: 0;
+    margin-top: 30px;
 }
 
 .grid-item{
@@ -274,6 +287,7 @@
     padding: 2rem;
 }
 
+
 .menu-item{
     text-decoration: none;
     color: black;
@@ -285,9 +299,24 @@
     height: 400px;
 }
 
+.grid-1 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-1:hover {
+    transform: translateX(-10px);
+}
+
 .grid-2{
     grid-area: grid-2;
     background-image: url(https://www.laprensa.com.ar/multimedios/imgs/131263_620.jpg);
+}
+.grid-2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-2:hover {
+    transform: translateX(+10px);
 }
 
 .grid-3{
@@ -295,9 +324,25 @@
     background-image: url(https://malevamag.com/wp-content/uploads/2021/06/Invernadero-Gin-Tapas-16-1024x682.jpg);
 }
 
+.grid-3 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-3:hover {
+    transform: translateX(-10px);
+}
+
 .grid-4{
     grid-area: grid-4;
     background-image: url(https://afrika.com.ar/afrika.jpg);
+}
+
+.grid-4 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-4:hover {
+    transform: translateX(+10px);
 }
 
 .emprendimientos{
@@ -318,6 +363,7 @@
 
 .titulos-emprendimientos{
     text-align: center;
+    color: black;
     padding-inline: 8rem;
     display: flex;
     flex-direction: column;
@@ -328,15 +374,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .img-1{
     border-radius: 4px;
-}
-
-.card-nosotros{
-    max-width: 100%;
-    flex: 1;
-    gap: 1rem;
-    padding: 2rem;
 }
 
 .card{
@@ -429,6 +469,7 @@ footer {
         align-items: flex-start;
     }
 
+    
     .menu-item{
         font-size: 25px;
         align-items: center;
@@ -546,11 +587,12 @@ footer {
     }
 
     .foto-nosotros{
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        height: 50px;
-        width: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "img-1";
     }
 
     .formulario{
@@ -562,5 +604,15 @@ footer {
     .emprendimientos-medios{
         margin: 10px;
         padding: 4px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "grid-1"
+        "grid-2"
+        "grid-3"
+        "grid-4";
+        font-family: 'Poppins', sans-serif;
     }
+    
 }
